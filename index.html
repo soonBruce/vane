@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<head>
+<title>Valentine´s Erika </title>
+<link href='fontcss.css' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="gold.css" type='text/css'>
+<style>
+
+.inline { float:left; }
+
+body {
+	background: #c80707;
+}
+
+.heart {
+	position: relative;
+	width: 300px;
+	height: 280px;
+	margin: 100px auto;
+}
+
+.heart::before,
+.heart::after {
+	content: "";
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	background-color: #640d0d;
+	width: 150px;
+	height: 240px;
+	border-radius: 75px 75px 0 0;
+}
+
+.heart::before {
+	left: 0px;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	background-color: #cf9797;
+	box-shadow: -10px 1px 15px 0 rgba(0,0,0,0.2),
+		inset 20px -195px 65px 0 #640d0d, 
+		inset -2px 2px 0 rgba(255,255,255,.75), 
+		inset -5px 20px 0px rgba(255,255,255,.35), 
+		inset -5px 20px 10px rgba(255,255,255,.25);		
+}
+.heart::after {
+	left: 64px;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg);
+	box-shadow: 
+		15px 3px 25px rgba(0,0,0,0.35),
+		inset -25px 10px 35px rgba(0,0,0,.35);
+		
+}
+
+.message {
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 36px;
+	font-weight: bold;
+	color: #640d0d;
+	text-shadow: -1px -1px 1px #ae6363, 1px 1px 1px #450000;
+	padding: 50px 0 0 5px;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	-o-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+.message:fisrt-child {
+	text-indent: 1em;
+}
+#heartmio{height: 220px; width: 220px;}
+
+#heartmio2{height: 280px; width: 280px;}
+
+h1{
+color: #FFFFFF;
+}
+
+.choco{
+
+	top:0px;
+	left:0px;
+	position:absolute;
+	width:135px;
+	height:135px;
+
+}
+
+</style>
+</head>
+<body>
+
+
+
+
+<div id="heartmiox" class="inline">
+<img id="heartmio" src="heart.svg" />
+</div>
+
+<div class="inline">
+
+<div class="heart">
+	<p class="message">Happy<br>Valentine's</p>
+</br>
+<h2>
+              <font class="shiny">
+  <font class="inner-shiny">Erika</font>
+</font>      
+</h2>  
+</div>
+
+</div>
+
+<div id="heartmio2x" class="inline">
+<img id="heartmio2" src="heart1.svg" >
+ 
+</img>
+</div>
+<script src='jquery-2.2.4.min.js'></script>
+<script>
+$(document).ready(function(){
+
+ 
+	$('#heartmiox').click(function chococlick() {
+
+
+       var snow = $('<div class="choco"></div>');
+        $('#heartmiox').prepend(snow);
+        // snowX = Math.floor(Math.random() * $('#snowflakes').width());
+        // snowSpd = Math.floor(Math.random() * (500) * 20);
+
+        //snow.css({'left':snowX+'px'});
+    snow.html('<img class="choco" src="choco.png" > </img>');
+//"<h1 >To: FUN</h1>");
+	//"*");
+	//'<img id="choco" src="choco.png" > </img>');
+        snow.animate({
+            marginTop: "+=120px",
+            opacity : "1",
+
+        },4000, function(){
+            //$(this).remove();
+            //jquerysnow();
+        });
+
+
+
+	});
+
+    $("#heartmio2x").click(function(){
+		$("#heartmio2x").html("<h1 >By: Hangry<br> To: Erika </h1>");
+	});
+ 
+});
+</script>
+
+</body>
+</html>
